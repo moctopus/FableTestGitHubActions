@@ -19,6 +19,13 @@ jobs:
         with: 
           submodules: true
 
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.x.x'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16.x.x
+
       - run: |
           dotnet tool restore
           npm install -g npm

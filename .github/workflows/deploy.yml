@@ -28,9 +28,6 @@ jobs:
 
       - run: |
           dotnet tool restore
-          npm install -g npm
-          npm ci
-          npm run build
           dotnet fable src
     
       # - name: Deploy

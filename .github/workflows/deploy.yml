@@ -27,6 +27,7 @@ jobs:
           node-version: 14.x.x
       - run: |
           dotnet tool restore
+          npm install -g npm
           npm ci
           npm run build
           dotnet fable src
